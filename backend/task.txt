@@ -1,0 +1,19 @@
+* Build an app (preferably in Javascript/NodeJS) where you connect to Google Drive and
+
+* list files,
+
+* download files
+
+* list all users who have access to a file
+
+* It should also be real time where if new users are added to the file, in real time, you get an event and you display the new users. Similarly, if users are removed from the file.
+
+* Provide a README file which tells a) what does your program do, b) how to execute it. Make it extremely easy that a 5 year old can understand and execute the script.
+
+
+first feature:
+// api to get list with file IDs -- does auth implicitly -- get
+// api to download file ID -- POST
+// api to get user permissions (live) -- POST?
+
+

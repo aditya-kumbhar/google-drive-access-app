@@ -1,0 +1,26 @@
+{
+  "name": "google-drive-access-tracker",
+  "version": "1.0.0",
+  "description": "A basic app to connect to Google Drive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "google",
+    "google",
+    "drive",
+    "utility",
+    "drive",
+    "access"
+  ],
+  "author": "aditya-kumbhar",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "googleapis": "^105.0.0",
+    "socket.io": "^4.6.1"
+  }
+}
