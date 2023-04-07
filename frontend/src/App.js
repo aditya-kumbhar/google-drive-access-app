@@ -37,16 +37,6 @@ function App() {
 
         // Set up a WebSocket connection for real-time updates
         const newSocket = io(`${baseURL}/${file.id}`);
-       // const newSocket = io(`${baseURL}`, {
-         //   path: `/${file.id}`,
-            // reconnectionDelay: 1000,
-            // reconnection: true,
-            // reconnectionAttempts: 10,
-            // transports: ['http'],
-            // agent: false,
-            // upgrade: false,
-            // rejectUnauthorized: false
-        // });
         setSocket(newSocket);
 
         newSocket.on('connect', () => {
@@ -57,19 +47,6 @@ function App() {
             console.log('Users changed')
             setUserList(newUserList);
         });
-      /*  newSocket.on('userAdded', (addedUsers) => {
-            console.log('User added')
-            setUserList((prevUsers) => {
-                const prevEmails = prevUsers.map((user) => user.email);
-                const filteredUsers = addedUsers.filter((user) => !prevEmails.includes(user.email));
-                return [...prevUsers, ...filteredUsers];
-            });
-        });
-        newSocket.on('userRemoved', (removedUsers) => {
-            console.log('User removed')
-            setUserList((prevUsers) =>
-                prevUsers.filter((user) => !removedUsers.find((u) => u.email === user.email))
-            );});*/
     };
     function handleFileClick(file) {
         console.log(file.id)
